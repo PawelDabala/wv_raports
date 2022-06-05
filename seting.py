@@ -1,6 +1,5 @@
-_smtp = 'smtp.gmail.com'
-port = 465
-email_addr = 'reportswvmd@gmail.com'
-email_passwd = 'vvbyicqzkayveghe'
-imap = 'imap.gmail.com'
-
+EMAIL_SMPT = "smtp.gmail.com"
+EMAIL_PORT = 465
+EMAIL_ADR = "reportswvmd@gmail.com"
+EMAIL_PASSWD = "vvbyicqzkayveghe"
+EMAIL_IMAP = "imap.gmail.com"
