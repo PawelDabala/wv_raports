@@ -18,14 +18,14 @@ def remove_files(directory: str):
     for f in all_files:
         os.remove(f)
 
+def get_mails():
+    remove_files(directory)
+    os.chdir("..")
 
-remove_files(directory)
-os.chdir("..")
-
-with MailBox(EMAIL_IMAP).login(EMAIL_ADR, EMAIL_APP_PASSWD, "INBOX") as mailbox:
-    for msg in mailbox.fetch():
-        if msg.from_ == msg_from and msg.date.date() >= daybefore:
-            for att in msg.attachments:
-                print("-", att.filename, att.content_type)
-                with open(rf"{directory}/{att.filename}", "wb") as f:
-                    f.write(att.payload)
+    with MailBox(EMAIL_IMAP).login(EMAIL_ADR, EMAIL_APP_PASSWD, "INBOX") as mailbox:
+        for msg in mailbox.fetch():
+            if msg.from_ == msg_from and msg.date.date() >= daybefore:
+                for att in msg.attachments:
+                    print("-", att.filename, att.content_type)
+                    with open(rf"{directory}/{att.filename}", "wb") as f:
+                        f.write(att.payload)
