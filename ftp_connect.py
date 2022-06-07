@@ -6,8 +6,7 @@ import paramiko
 sftpHost = "194.145.229.133"
 sftpPort = 22
 uname = "PHD_Getter_Łukasz"
-privateKeyFilePath = "pem_privatekey"
-# privateKeyFilePath = 'pbk-vw-privatekey_remote26012022.ppk'
+privateKeyFilePath = r"login\pem_privatekey"
 password = "Xu%KP8WObh9@LA="
 passphrase = "218522gttr"
 directory = "attachments"
@@ -58,4 +57,4 @@ def connect_ftp():
     ftp.close()
 
 
-print("DONE!!!")
+print("Send Files")
