@@ -29,6 +29,7 @@ def connect_ftp():
     files = ftp.listdir()
     print(files)
 
+    #get file list
     files = [file for file in os.listdir(directory) if file.endswith(".csv")]
 
     for file in files:
