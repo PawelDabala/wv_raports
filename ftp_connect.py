@@ -37,21 +37,21 @@ def connect_ftp():
             print("totalvisits")
             ftp.put(
                 rf"{directory}\{file}",
-                f"/VWCV PHD Adobe/2021/Daily 2022/Totalvisits/SENT/{file}",
+                f"/VWCV PHD Adobe/2021/Daily 2022/Totalvisits/{file}",
             )
 
         if file.find("visits_carline") != -1:
             print("viits_carline")
             ftp.put(
                 rf"{directory}\{file}",
-                f"/VWCV PHD Adobe/2021/Daily 2022/Visits_carline/SENT/{file}",
+                f"/VWCV PHD Adobe/2021/Daily 2022/Visits_carline/{file}",
             )
 
         if file.find("visits_channel") != -1:
             print("visits_channel")
             ftp.put(
                 rf"{directory}\{file}",
-                f"/VWCV PHD Adobe/2021/Daily 2022/Visits_channel/SENT/{file}",
+                f"/VWCV PHD Adobe/2021/Daily 2022/Visits_channel/{file}",
             )
         sleep(2)
 
